@@ -12,7 +12,7 @@ func TestSum (t *testing.T) {
 		y int
 		n int
 	}{
-	    {1, 1, 2},
+	    {1, 1, 4},
 	    {1, 4, 5},
 	    {2, 2, 4},
 	    {5, 7, 12},
