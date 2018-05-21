@@ -1,9 +1,6 @@
 pipeline {
   agent {
-    docker {
-      image 'golang:1.10-alpine'
-    }
-
+    label 'node_build'
   }
   stages {
     stage('Pre-check') {
@@ -13,12 +10,9 @@ pipeline {
       post {
         failure {
           echo 'Build envorinment error: golang is missing...'
-
         }
-
         success {
           echo 'Build envorinment: OK '
-
         }
 
       }
@@ -30,14 +24,10 @@ pipeline {
       post {
         failure {
           echo 'Build error...'
-
         }
-
         success {
           echo 'Build: OK '
-
         }
-
       }
     }
     stage('Test') {
@@ -49,12 +39,9 @@ pipeline {
           echo 'Test error...'
 
         }
-
         success {
           echo 'Test: OK '
-
         }
-
       }
     }
   }
