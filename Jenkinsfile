@@ -12,9 +12,8 @@ pipeline {
           echo 'Build envorinment error: golang is missing...'
         }
         success {
-          echo 'Build envorinment: OK '
+          echo 'Build envorinment: OK'
         }
-
       }
     }
     stage('Build') {
@@ -26,7 +25,7 @@ pipeline {
           echo 'Build error...'
         }
         success {
-          echo 'Build: OK '
+          echo 'Build: OK'
         }
       }
     }
@@ -40,7 +39,7 @@ pipeline {
 
         }
         success {
-          echo 'Test: OK '
+          echo 'Test: OK'
         }
       }
     }
